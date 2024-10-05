@@ -123,6 +123,7 @@ public class AppiumBasics extends BaseTest {
         driver.pressKey(new KeyEvent(AndroidKey.BACK));
         driver.pressKey(new KeyEvent(AndroidKey.HOME));
 
+        // Open App Using App Package/ App Activity
         // adb devices -> to check action emulator
         // adb shell dumpsys window | find "mCurrentFocus" -> mCurrentFocus=Window{e21eed2 u0 io.appium.android.apis/io.appium.android.apis.preference.PreferenceDependencies}
         String appPackage = "io.appium.android.apis";
