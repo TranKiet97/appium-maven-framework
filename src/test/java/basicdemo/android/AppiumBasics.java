@@ -1,4 +1,4 @@
-package apidemos.ui;
+package basicdemo.android;
 
 import com.google.common.collect.ImmutableMap;
 import io.appium.java_client.AppiumBy;
@@ -27,7 +27,7 @@ public class AppiumBasics extends BaseTest {
 
     @BeforeMethod
     public void beforeTest() throws MalformedURLException, URISyntaxException {
-        driver = LaunchApplication();
+        driver = LaunchApiDemosApplication();
     }
 
     @Test

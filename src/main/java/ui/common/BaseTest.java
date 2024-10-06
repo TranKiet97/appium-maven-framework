@@ -26,7 +26,7 @@ public class BaseTest {
         service.start();
     }
 
-    public AndroidDriver LaunchApplication() throws URISyntaxException, MalformedURLException {
+    public AndroidDriver LaunchApiDemosApplication() throws URISyntaxException, MalformedURLException {
         // AndroidDriver, IOSDriver
         UiAutomator2Options options = new UiAutomator2Options();
         options.setDeviceName("KaneEmulatorPhone");
