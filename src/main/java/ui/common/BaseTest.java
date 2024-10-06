@@ -36,6 +36,28 @@ public class BaseTest {
         return driver;
     }
 
+    public AndroidDriver LaunchGeneralStoreApplication() throws URISyntaxException, MalformedURLException {
+        // AndroidDriver, IOSDriver
+        UiAutomator2Options options = new UiAutomator2Options();
+        options.setDeviceName("KaneEmulatorPhone");
+        options.setApp("D:\\Workspace\\Appium Maven Framework\\appium-maven-framework\\src\\test\\resources\\General-Store.apk");
+        options.setChromedriverExecutable("D:\\Workspace\\Appium Maven Framework\\appium-maven-framework\\src\\test\\resources\\chromedriver.exe");
+        driver = new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(), options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        return driver;
+    }
+
+    public AndroidDriver LaunchBrowser() throws URISyntaxException, MalformedURLException {
+        // AndroidDriver, IOSDriver
+        UiAutomator2Options options = new UiAutomator2Options();
+        options.setDeviceName("KaneEmulatorPhone");
+        options.setChromedriverExecutable("D:\\Workspace\\Appium Maven Framework\\appium-maven-framework\\src\\test\\resources\\chromedriver.exe");
+        options.setCapability("browserName", "Chrome");
+        driver = new AndroidDriver(new URI("http://127.0.0.1:4723/").toURL(), options);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        return driver;
+    }
+
     public void TearDown() {
         service.stop();
     }
